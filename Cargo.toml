@@ -1,6 +1,6 @@
 [package]
 name = "centipede"
-version = "0.2.12"
+version = "0.2.13"
 authors = [
     "Omer <omer@kzencorp.com>",
     "Gary <gary@kzencorp.com>"
@@ -13,12 +13,16 @@ crate-type = ["lib"]
 serde_derive = "1.0"
 serde = "1.0"
 rayon = "1.0.3"
-curv = { package = "curv-kzen", version = "0.7", default-features = false }
 
 [dependencies.bulletproof]
 git = "https://github.com/KZen-networks/bulletproofs"
 tag = "v1.1.6"
 default-features = false
+
+[dependencies.curv]
+git = "https://github.com/ben-falconx/curv"
+default-features = false
+tag = "v0.7.2"
 
 [dev-dependencies]
 criterion = "0.2"
@@ -30,3 +34,4 @@ default = ["curv/rust-gmp-kzen"]
 name = "v_backup"
 path = "benches/v_backup.rs"
 harness = false
+
